@@ -62,6 +62,11 @@ def parseCSV(csvPath, colNum, rowStart):
     for r in range(rowStart, rows):
         l.append(parsed[r][colNum])
     return l
+"""
+Unfortunately, due to us being short on time, we failed to actually perform the calculations ourselves. We resorted to using the values sports-reference already provided
+which still returned the same values we sought to calculate. I still am interested in that the SRS can do, so I think we'd like to generate our own SRSs based off of more
+applicable sets such as Home SRSs and Away SRSs and construct regressions using matplotlib.
+"""
 
 ######################################
 
