@@ -136,7 +136,7 @@ for c, d in Conferences.conferences.items():
 for team in Teams:
     print(team.conference)
     confWeight = conference_weight[team.conference]
-    # This was actually experimental. We tried averaging out the actual rating with the weight of the conference
+    # This was actually experimental. We tried averaging out the actual rating with the weight of the conference in order to achieve smaller numbers.
     try: scores[team.name] = (team.simple_rating_system)*(confWeight)/2
     except TypeError: scores[team.name] = 0
 
