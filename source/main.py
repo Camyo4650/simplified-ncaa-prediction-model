@@ -136,7 +136,8 @@ for c, d in Conferences.conferences.items():
 for team in Teams:
     print(team.conference)
     confWeight = conference_weight[team.conference]
-    try: scores[team.name] = (team.simple_rating_system + team.strength_of_schedule)*(confWeight)/2
+    # This was actually experimental. We tried averaging out the actual rating with the weight of the conference
+    try: scores[team.name] = (team.simple_rating_system)*(confWeight)/2
     except TypeError: scores[team.name] = 0
 
 dumpDictCSV('data/Scores.csv', scores, ["Teams", "SRS"])
