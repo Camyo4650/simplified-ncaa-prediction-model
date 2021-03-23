@@ -131,6 +131,7 @@ for c, d in Conferences.conferences.items():
     for teamabb in d["teams"]:
         print("        "+teamabb+'\n            = '+str(Teams.__getitem__(teamabb).simple_rating_system)+'')
         teams += 1
+        # As seen here, we iterate through every team member in every conference. We then total their SRSs and average them out to achieve the conference weight.
         try: confWeight += Teams.__getitem__(teamabb).simple_rating_system
         except TypeError: continue
     confWeight /= teams
